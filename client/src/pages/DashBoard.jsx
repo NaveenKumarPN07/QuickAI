@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { dummyCreationData } from "../assets/assets";
 import { Gem, Sparkles } from "lucide-react";
 import { Protect, useAuth } from "@clerk/clerk-react";
-import Creationitem from "../components/Creationitem";
+import CreationItem from "../components/CreationItem";
 import axios from "axios";
 
 axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
@@ -63,7 +63,7 @@ const DashBoard = () => {
       <div className="space-y-3">
         <p className="mt-6 mb-4">Recent Creations</p>
         {creation.map((item) => (
-          <Creationitem key={item.id} item={item} />
+          <CreationItem key={item.id} item={item} />
         ))}
       </div>
     </div>
